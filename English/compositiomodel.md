@@ -75,6 +75,8 @@ In fact,had Disney not purchased the studio,Fox wa planning to follow Logan with
 
 Not all encounters between our species were peaceful or pretty,but neither were they entirely violent.
 
+Wherever the root of the problem lies-be it the educational system,government policy or corporate recruiting practices-it needs to be identified and fixed.
+
 ## 8.Virtual/Denying
 
 Few forces change the world so much as education and the empowerment of women.
