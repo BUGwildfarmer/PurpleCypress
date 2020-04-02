@@ -1,0 +1,619 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Composition Model - PurpleCypress</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700%7CFira+Mono&display=fallback">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1desciption" tabindex="0" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="PurpleCypress" aria-label="PurpleCypress" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              PurpleCypress
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Composition Model
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        首页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          English
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="PurpleCypress" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    PurpleCypress
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      English
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        English
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Composition Model
+      </label>
+    
+    <a href="./" title="Composition Model" class="md-nav__link md-nav__link--active">
+      Composition Model
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1desciption" class="md-nav__link">
+    1.Desciption
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2statefactssubjiect_and_object" class="md-nav__link">
+    2.StateFacts/Subjiect_and_Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3drawconclusion" class="md-nav__link">
+    3.Drawconclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4dualcharacter" class="md-nav__link">
+    4.DualCharacter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5parellelism" class="md-nav__link">
+    5.Parellelism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6thereit" class="md-nav__link">
+    6.There/It
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7inversion" class="md-nav__link">
+    7.Inversion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8virtualdenying" class="md-nav__link">
+    8.Virtual/Denying
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9imperativeplaint" class="md-nav__link">
+    9.Imperative/Plaint
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../everdayphrases/" title="Everday Phrases" class="md-nav__link">
+      Everday Phrases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../everysentences/" title="Every Sentences" class="md-nav__link">
+      Every Sentences
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1desciption" class="md-nav__link">
+    1.Desciption
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2statefactssubjiect_and_object" class="md-nav__link">
+    2.StateFacts/Subjiect_and_Object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3drawconclusion" class="md-nav__link">
+    3.Drawconclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4dualcharacter" class="md-nav__link">
+    4.DualCharacter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5parellelism" class="md-nav__link">
+    5.Parellelism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6thereit" class="md-nav__link">
+    6.There/It
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7inversion" class="md-nav__link">
+    7.Inversion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8virtualdenying" class="md-nav__link">
+    8.Virtual/Denying
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9imperativeplaint" class="md-nav__link">
+    9.Imperative/Plaint
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Composition Model</h1>
+                
+                <h2 id="1desciption">1.Desciption</h2>
+<p>As is described in the picture,...
+In the left picture...,while in the right...</p>
+<p>The two pictures illustrate vividly that...
+The pictures also make it obvious that...
+(Obiously/Apparently,...)
+(It goes without saying that) the picture aims at revealing a current problem...</p>
+<p>From the two pictures we can sense a crazy tendency of...</p>
+<p>Though this drawing is a little exaggerating,it is not rare for us to find in...</p>
+<h2 id="2statefactssubjiect_and_object">2.StateFacts/Subjiect_and_Object</h2>
+<p>(sth.)arouse wide public concern/draw public attention/cause a heated discussion/debate
+(sth.)play an increasingly significant role in...
+(sth.)exert positive/negative effects on.../lead to/give rise to/contribute to/result in...
+(sth.)is witnessing... 
+(sth.)be no exception</p>
+<p>(sth.)be beneficial/conducive to...
+(sth.)widen one's horizon/broaden one's vision/lay a solid foundation for...
+(sth.)guarantee the stability and prosperity of our society
+(sb.)acquire knowledge and skills/improve  comprehensive quality
+(sb./sth.)ease/relieve financial/psychological burden</p>
+<p>(sth.)be supported by sound reasons.
+(sb.)be committed/devoted to...</p>
+<p>Though the government has already taken pains to implement regulations,it still fails to...
+...,which was what mattered </p>
+<h2 id="3drawconclusion">3.Drawconclusion</h2>
+<p>Taking all these factors into consideration/From what had been mentioned above,we can come to the conlusion that...</p>
+<p>As far as I am concerned/Pesrsonally,...</p>
+<h2 id="4dualcharacter">4.DualCharacter</h2>
+<p>be faced with new opportunities and challenges</p>
+<p>God will not look you over for medals,but for scars.</p>
+<p>Sth. has changed the way our society develops,but its bright side should not keep us from following closely its dark side.</p>
+<h2 id="5parellelism">5.Parellelism</h2>
+<p>With the rapid development of economy,the remarkable improvement of technological level,steady growth of people's living standard,...</p>
+<h2 id="6thereit">6.There/It</h2>
+<p>It is universally acknowledged that ...
+It is commonly believed/recognized that..</p>
+<p>It is undeniable that.../There is no denying that...</p>
+<p>It is inevitable/inescapabke/unavoidable that...
+(The inevitable/inescapable fact is that...)</p>
+<p>It can seem tasteless,misleading or counterproductive to hail progress when there is still so much wrong with the world.</p>
+<p>There is anecdotal evidence that...(据传闻)
+There was a time when it saturated the evening news and the morning papers that... </p>
+<h2 id="7inversion">7.Inversion</h2>
+<p>If we let this situation of continues,not only does it ...,but also...</p>
+<p>In fact,had Disney not purchased the studio,Fox wa planning to follow Logan with additional X-Men spinoffs that spannned a variety of genres and tones,staring with Josh Boonez's horrorstyle The New Mutants.</p>
+<p>Not all encounters between our species were peaceful or pretty,but neither were they entirely violent.</p>
+<p>Wherever the root of the problem lies-be it the educational system,government policy or corporate recruiting practices-it needs to be identified and fixed.</p>
+<h2 id="8virtualdenying">8.Virtual/Denying</h2>
+<p>Few forces change the world so much as education and the empowerment of women.</p>
+<p>be second to none/nothing(无与伦比)</p>
+<h2 id="9imperativeplaint">9.Imperative/Plaint</h2>
+<p>May all the regrets of last year pave the way for this year's surprise! </p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../.." title="首页" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                首页
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../everdayphrases/" title="Everday Phrases" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                Everday Phrases
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
