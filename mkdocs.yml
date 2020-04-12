@@ -1,0 +1,30 @@
+site_name: PurpleCypress
+
+repo_name: 'BUGwildfarmer/PurpleCypress'
+
+nav: 
+  - 首页: index.md
+  - English:
+      - Composition Model: English/compositiomodel.md
+      - Everday Phrases: English/everdayphrases.md
+      - Every Sentences: English/everysentences.md
+      - Astronomy: English/astronomy.md
+  - ACM:
+      - infercheck: ACM/infercheck/infercheck.md
+
+## Theme
+theme:
+  name: 'material'
+  language: 'zh'
+  palette:
+    primary: 'white'
+    accent: 'red'
+  include_search_page: false
+  search_index_only: true
+  favicon: 'favicon.ico'
+
+  feature:
+    tabs: true
+  font:
+    text: 'Fira Sans'
+    code: 'Fira Mono'
