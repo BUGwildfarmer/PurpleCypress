@@ -32,4 +32,6 @@ We've dominated the planet only because an unparalleled ability to care for one 
 
 Get up early.Grind out hardy.Gain on success.
 
-The spirit is willing and the flesh is weak.
+- The spirit is willing and the flesh is weak.
+- A contented mind is the greatest blessing a man can enjoy in this world.
+- The intrinsic value of education is to maintain a nation's forward momentum.

@@ -62,6 +62,8 @@ It is inevitable/inescapabke/unavoidable that...
 
 It can seem tasteless,misleading or counterproductive to hail progress when there is still so much wrong with the world.
 
+It'll be an uphill struggle to get the new task finished.
+
 There is anecdotal evidence that...(据传闻)
 There was a time when it saturated the evening news and the morning papers that... 
 
@@ -69,20 +71,16 @@ There was a time when it saturated the evening news and the morning papers that.
 
 ## 7.Inversion
 
-If we let this situation of continues,not only does it ...,but also...
-
-In fact,had Disney not purchased the studio,Fox wa planning to follow Logan with additional X-Men spinoffs that spannned a variety of genres and tones,staring with Josh Boonez's horrorstyle The New Mutants.
-
-Not all encounters between our species were peaceful or pretty,but neither were they entirely violent.
-
-Wherever the root of the problem lies-be it the educational system,government policy or corporate recruiting practices-it needs to be identified and fixed.
+- If we let this situation of continues,not only does it ...,but also...
+- In fact,had Disney not purchased the studio,Fox wa planning to follow Logan with additional X-Men spinoffs that spannned a variety of genres and tones,staring with Josh Boonez's horrorstyle The New Mutants.
+- Not all encounters between our species were peaceful or pretty,but neither were they entirely violent.
+- Wherever the root of the problem lies-be it the educational system,government policy or corporate recruiting practices-it needs to be identified and fixed.
 
 ## 8.Virtual/Denying
 
-Few forces change the world so much as education and the empowerment of women.
-
-be second to none/nothing(无与伦比)
+- Few forces change the world so much as education and the empowerment of women.
+- be second to none/nothing(无与伦比)
 
 ## 9.Imperative/Plaint
 
-May all the regrets of last year pave the way for this year's surprise! 
+-  May all the regrets of last year pave the way for this year's surprise! 
