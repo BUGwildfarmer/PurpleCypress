@@ -26,6 +26,7 @@ Though this drawing is a little exaggerating,it is not rare for us to find in...
 (sb.)acquire knowledge and skills/improve  comprehensive quality
 (sb./sth.)ease/relieve financial/psychological burden
 
+(sb.)come to the disturbing realization that...(不安地认识到)
 (sth.)be supported by sound reasons.
 (sb.)be committed/devoted to...
 

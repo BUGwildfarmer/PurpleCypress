@@ -72,3 +72,5 @@ cutting-edge technology
 - take oneself off the hook(推卸责任)
 - confront one's flaws head on
 - alter ego(至交)
+- combat the awful tyranny of sth.
+- be subjucted to(使遭受)
