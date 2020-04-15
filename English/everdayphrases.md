@@ -73,4 +73,5 @@ cutting-edge technology
 - confront one's flaws head on
 - alter ego(至交)
 - combat the awful tyranny of sth.
+- rival sb for/in sth.
 - be subjucted to(使遭受)

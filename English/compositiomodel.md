@@ -67,6 +67,7 @@ It'll be an uphill struggle to get the new task finished.
 
 There is anecdotal evidence that...(据传闻)
 There was a time when it saturated the evening news and the morning papers that... 
+There is growing sentiment for sth./that...(...情绪日益高涨)
 
 
 
