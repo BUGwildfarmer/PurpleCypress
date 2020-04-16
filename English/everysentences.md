@@ -35,3 +35,5 @@ Get up early.Grind out hardy.Gain on success.
 - The spirit is willing and the flesh is weak.
 - A contented mind is the greatest blessing a man can enjoy in this world.
 - The intrinsic value of education is to maintain a nation's forward momentum.
+- Wisdom is oftentimes nearer when we stoop than when we soar.
+- Putting off an easy thing makes it hard,and putting off a hard one makes it impossible.
