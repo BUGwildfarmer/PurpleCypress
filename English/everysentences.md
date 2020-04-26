@@ -38,3 +38,4 @@ Get up early.Grind out hardy.Gain on success.
 - Wisdom is oftentimes nearer when we stoop than when we soar.
 - Putting off an easy thing makes it hard,and putting off a hard one makes it impossible.
 - The whole point in being a hero is to do something greater than yourself.
+- It always seems impossible until it's done.

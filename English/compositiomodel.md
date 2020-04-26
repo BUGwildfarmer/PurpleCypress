@@ -66,7 +66,7 @@ It can seem tasteless,misleading or counterproductive to hail progress when ther
 It'll be an uphill struggle to get the new task finished.
 
 There is anecdotal evidence that...(据传闻)
-There are several reasons undelying sth.
+There are several reasons undelying sth. 
 There was a time when it saturated the evening news and the morning papers that... 
 There is growing sentiment for sth./that...(...情绪日益高涨)
 
@@ -83,6 +83,7 @@ There is growing sentiment for sth./that...(...情绪日益高涨)
 
 - Few forces change the world so much as education and the empowerment of women.
 - be second to none/nothing(无与伦比)
+- Nothing is too small to konow,and nothing is too big to attempt.
 
 ## 9.Imperative/Plaint
 
