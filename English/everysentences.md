@@ -39,3 +39,4 @@ Get up early.Grind out hardy.Gain on success.
 - Putting off an easy thing makes it hard,and putting off a hard one makes it impossible.
 - The whole point in being a hero is to do something greater than yourself.
 - It always seems impossible until it's done.
+- You can't cross the sea merely by standing and staring at the water.
