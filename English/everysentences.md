@@ -40,3 +40,4 @@ Get up early.Grind out hardy.Gain on success.
 - The whole point in being a hero is to do something greater than yourself.
 - It always seems impossible until it's done.
 - You can't cross the sea merely by standing and staring at the water.
+- Youth is not a time of life;it is a state of mind.

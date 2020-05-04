@@ -83,7 +83,7 @@ There is growing sentiment for sth./that...(...情绪日益高涨)
 
 - Few forces change the world so much as education and the empowerment of women.
 - be second to none/nothing(无与伦比)
-- Nothing is too small to konow,and nothing is too big to attempt.
+- Nothing is too small to konow,and nothing is too big to attempt. 
 
 ## 9.Imperative/Plaint
 
