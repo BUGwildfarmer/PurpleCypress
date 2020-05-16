@@ -42,3 +42,4 @@ Get up early.Grind out hardy.Gain on success.
 - You can't cross the sea merely by standing and staring at the water.
 - Youth is not a time of life;it is a state of mind.
 - The chief proof of man's real greatness lies in his perception of his own smallness.
+- Everything that is done in the world is done by hope.
