@@ -43,3 +43,4 @@ Get up early.Grind out hardy.Gain on success.
 - Youth is not a time of life;it is a state of mind.
 - The chief proof of man's real greatness lies in his perception of his own smallness.
 - Everything that is done in the world is done by hope.
+- Absence is to love what wind is to fire;it exdinguishes the small.it enkindles the great.
