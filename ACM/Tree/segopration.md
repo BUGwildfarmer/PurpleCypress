@@ -372,7 +372,7 @@ void pushup(int rt)
 	sum[rt]=(sum[rt<<1]+sum[rt<<1|1])%mod;
 }
 
-void pushdown(int rt,int m)//m为该点区间长度,lazy表示自己已处理但孩子为处理
+void pushdown(int rt,int m)//m为该点区间长度,lazy表示自己已处理但孩子未处理
 {
 	if(lazt[rt])
 	{
@@ -415,7 +415,7 @@ void query(int L,int R,int l,int r,int rt)//L,R始终不变，目的是求出组
 	{
 		query(L,R,l,m,rt<<1);
 	}
-	if(R<m)
+	if(R>m)
 	{
 		query(L,R,m+1,r,rt<<1|1);
 	}
