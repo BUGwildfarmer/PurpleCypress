@@ -51,6 +51,7 @@ E:\thirdgrade\大三下\陈仕柏小朋友\PicAppDB\c#\csb201710513054PicApp\csb
 E:\thirdgrade\大三下\陈仕柏小朋友\PicAppDB\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.csproj.CoreCompileInputs.cache
 E:\thirdgrade\大三下\陈仕柏小朋友\PicAppDB\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.exe
 E:\thirdgrade\大三下\陈仕柏小朋友\PicAppDB\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.pdb
+<<<<<<< HEAD
 E:\Accumulation\purplecypress\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\bin\Debug\PicShareDB.accdb
 E:\Accumulation\purplecypress\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\bin\Debug\csb201710513054PicApp.exe.config
 E:\Accumulation\purplecypress\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\bin\Debug\csb201710513054PicApp.exe
@@ -69,3 +70,23 @@ E:\Accumulation\purplecypress\PurpleCypress\c#\csb201710513054PicApp\csb20171051
 E:\Accumulation\purplecypress\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.csproj.CoreCompileInputs.cache
 E:\Accumulation\purplecypress\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.exe
 E:\Accumulation\purplecypress\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.pdb
+=======
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\bin\Debug\PicShareDB.accdb
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.csprojAssemblyReference.cache
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.Add_Remark.resources
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.Form1.resources
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.Login.resources
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.Pic_Detail.resources
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.pic_draw.resources
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.Pic_Remark.resources
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.Pic_Upload.resources
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.Properties.Resources.resources
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.User_Detail.resources
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.csproj.GenerateResource.cache
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.csproj.CoreCompileInputs.cache
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.exe
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\obj\Debug\csb201710513054PicApp.pdb
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\bin\Debug\csb201710513054PicApp.exe.config
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\bin\Debug\csb201710513054PicApp.exe
+E:\thirdgrade\大三下\csb-little ghost\PurpleCypress\c#\csb201710513054PicApp\csb201710513054PicApp\bin\Debug\csb201710513054PicApp.pdb
+>>>>>>> d9ce54a44dbdec41f18c18f406f1f1c002011278

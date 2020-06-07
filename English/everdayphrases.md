@@ -75,3 +75,12 @@ cutting-edge technology
 - combat the awful tyranny of sth.
 - rival sb for/in sth.
 - be subjucted to(使遭受)
+
+#### 2020 June
+
+| Phrases | Meaning |
+| ------- | ------- |
+| give sb a run | 给某人机会 |
+| make sb a household | 让某人家喻户晓 |
+| keep alert / put sb on alert | 保持警惕 / 让某人进入警备状态 |
+| play perfect strategy | 用完美策略 |
