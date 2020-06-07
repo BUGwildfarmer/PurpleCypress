@@ -47,6 +47,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_descend = new System.Windows.Forms.Button();
             this.btn_ascend = new System.Windows.Forms.Button();
+            this.btn_origin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.photoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -170,19 +171,20 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_origin);
             this.groupBox1.Controls.Add(this.btn_descend);
             this.groupBox1.Controls.Add(this.btn_ascend);
             this.groupBox1.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(395, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 69);
+            this.groupBox1.Size = new System.Drawing.Size(306, 69);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "图片排序";
             // 
             // btn_descend
             // 
-            this.btn_descend.Location = new System.Drawing.Point(126, 22);
+            this.btn_descend.Location = new System.Drawing.Point(121, 22);
             this.btn_descend.Name = "btn_descend";
             this.btn_descend.Size = new System.Drawing.Size(68, 40);
             this.btn_descend.TabIndex = 0;
@@ -199,6 +201,16 @@
             this.btn_ascend.Text = "升序";
             this.btn_ascend.UseVisualStyleBackColor = true;
             this.btn_ascend.Click += new System.EventHandler(this.btn_ascend_Click);
+            // 
+            // btn_origin
+            // 
+            this.btn_origin.Location = new System.Drawing.Point(222, 22);
+            this.btn_origin.Name = "btn_origin";
+            this.btn_origin.Size = new System.Drawing.Size(68, 40);
+            this.btn_origin.TabIndex = 1;
+            this.btn_origin.Text = "还原";
+            this.btn_origin.UseVisualStyleBackColor = true;
+            this.btn_origin.Click += new System.EventHandler(this.btn_origin_Click);
             // 
             // Form1
             // 
@@ -243,6 +255,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_descend;
         private System.Windows.Forms.Button btn_ascend;
+        private System.Windows.Forms.Button btn_origin;
     }
 }
 

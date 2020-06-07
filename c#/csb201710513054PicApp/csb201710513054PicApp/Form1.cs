@@ -54,7 +54,7 @@ namespace csb201710513054PicApp
 
             dt = new DataTable();
 
-            /**********************默认按照降序排列****************************/
+            /**********************默认按照数据库原有顺序排列****************************/
 
             StringBuilder strSQL = new StringBuilder();
             StringBuilder strSQL1 = new StringBuilder();
@@ -131,100 +131,10 @@ namespace csb201710513054PicApp
             pd.Show();
         }
 
-        //private void rbtn_inscend_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    /*******************Photo datagridview显示*********************/
-        //    string strPath = Application.StartupPath + "\\PicShareDB.accdb";
-        //    ConStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data source=" + strPath;
-
-        //    dt = new DataTable();
-
-        //    /**********************默认按照降序排列****************************/
-
-        //    StringBuilder strSQL = new StringBuilder();
-        //    StringBuilder strSQL1 = new StringBuilder();
-
-        //    if (rbtn_descend.Checked == true)
-        //    {
-        //        // select Pid from Remark group by Pid
-        //        // select Photo.Pid,Pimg,Pname,Ptype,Pfrom,Pdate from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) );
-
-        //        strSQL.Append("select * from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) DESC);");
-        //        strSQL1.Append("select count(*) from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) DESC);");
-        //    }
-        //    else if (rbtn_inscend.Checked == true)
-        //    {
-        //        strSQL.Append("select * from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum));");
-        //        strSQL1.Append("select count(*) from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum));");
-        //    }
-        //    else
-        //    {
-        //        strSQL.Append("select * from Photo");
-        //        strSQL1.Append("select count(*) from Photo");
-        //    }
-
-        //    OleDat = new OleDbDataAdapter(strSQL.ToString(), ConStr);
-
-        //    Olecon = new OleDbConnection(ConStr);
-        //    Olecon.Open();
-        //    Maxvalue = Convert.ToInt32(new OleDbCommand(strSQL1.ToString(), Olecon).ExecuteScalar());
-        //    Olecon.Close();
-
-        //    // 0 ~ Maxvalue 行
-        //    OleDat.Fill(0, Maxvalue, dt);
-
-        //    dataGridView1.DataSource = dt;
-        //}
-
-        //private void rbtn_descend_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    /*******************Photo datagridview显示*********************/
-        //    string strPath = Application.StartupPath + "\\PicShareDB.accdb";
-        //    ConStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data source=" + strPath;
-
-        //    dt = new DataTable();
-
-        //    /**********************默认按照原序排列****************************/
-
-        //    StringBuilder strSQL = new StringBuilder();
-        //    StringBuilder strSQL1 = new StringBuilder();
-
-        //    strSQL.Append("select * from Photo");
-        //    strSQL1.Append("select count(*) from Photo");
-
-        //    //if (rbtn_descend.Checked == true)
-        //    //{
-        //    //    // select Pid from Remark group by Pid
-        //    //    // select Photo.Pid,Pimg,Pname,Ptype,Pfrom,Pdate from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) );
-
-        //    //    strSQL.Append("select * from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) DESC);");
-        //    //    strSQL1.Append("select count(*) from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) DESC);");
-        //    //}
-        //    //else if (rbtn_inscend.Checked == true)
-        //    //{
-        //    //    strSQL.Append("select * from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum));");
-        //    //    strSQL1.Append("select count(*) from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum));");
-        //    //}
-        //    //else
-        //    //{
-                
-        //    //}
-
-        //    OleDat = new OleDbDataAdapter(strSQL.ToString(), ConStr);
-
-        //    Olecon = new OleDbConnection(ConStr);
-        //    Olecon.Open();
-        //    Maxvalue = Convert.ToInt32(new OleDbCommand(strSQL1.ToString(), Olecon).ExecuteScalar());
-        //    Olecon.Close();
-
-        //    // 0 ~ Maxvalue 行
-        //    OleDat.Fill(0, Maxvalue, dt);
-
-        //    dataGridView1.DataSource = dt;
-        //}
-
+        // 升序
         private void btn_ascend_Click(object sender, EventArgs e)
         {
+            /**********************默认按照升序排列***********************/
             string strPath = Application.StartupPath + "\\PicShareDB.accdb";
             ConStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data source=" + strPath;
 
@@ -234,14 +144,15 @@ namespace csb201710513054PicApp
             StringBuilder strSQL = new StringBuilder();
             StringBuilder strSQL1 = new StringBuilder();
 
-            
-                // select Pid from Remark group by Pid
-                // select Photo.Pid,Pimg,Pname,Ptype,Pfrom,Pdate from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) );
-
-             strSQL.Append("select * from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) );");
-             strSQL1.Append("select count(*) from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) );");
+            // 首先要在外部数据库创建表，select into table from 则表示该table已经存在在数据库中
+            // 否则写create table ascmid 
+            strSQL.Append("SELECT Photo.Pid,Pname,Ptype,Pfrom,Pdate INTO ASCMid FROM Photo, Remark where Photo.Pid = Remark.Pid group by Photo.Pid, Pname, Ptype, Pfrom, Pdate order by AVG(Rnum);");
+            strSQL1.Append("select count(*) from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) );");
             
 
+            OleDat = new OleDbDataAdapter(strSQL.ToString(), ConStr);
+            strSQL.Clear();
+            strSQL.Append("SELECT ASCMid.Pid,Pimg,ASCMid.Pname,ASCMid.Ptype,ASCMid.Pfrom,ASCMid.Pdate FROM ASCMid INNER JOIN Photo ON ASCMid.Pid = Photo.Pid;");
             OleDat = new OleDbDataAdapter(strSQL.ToString(), ConStr);
 
             Olecon = new OleDbConnection(ConStr);
@@ -257,6 +168,7 @@ namespace csb201710513054PicApp
 
         private void btn_descend_Click(object sender, EventArgs e)
         {
+            /**********************默认按照数降序排列*************************/
             string strPath = Application.StartupPath + "\\PicShareDB.accdb";
             ConStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data source=" + strPath;
 
@@ -266,13 +178,40 @@ namespace csb201710513054PicApp
             StringBuilder strSQL = new StringBuilder();
             StringBuilder strSQL1 = new StringBuilder();
 
+            strSQL.Append("SELECT Photo.Pid,Pname,Ptype,Pfrom,Pdate INTO DESCMid FROM Photo, Remark where Photo.Pid = Remark.Pid group by Photo.Pid, Pname, Ptype, Pfrom, Pdate order by AVG(Rnum) DESC;");
+            strSQL1.Append("select count(*) from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) );");
 
-            // select Pid from Remark group by Pid
-            // select Photo.Pid,Pimg,Pname,Ptype,Pfrom,Pdate from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) );
 
-            strSQL.Append("select * from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) DESC);");
-            strSQL1.Append("select count(*) from Photo where Pid in (select Pid from Remark group by Pid order by avg(Rnum) DESC);");
+            OleDat = new OleDbDataAdapter(strSQL.ToString(), ConStr);
+            strSQL.Clear();
+            strSQL.Append("SELECT DESCMid.Pid,Pimg,DESCMid.Pname,DESCMid.Ptype,DESCMid.Pfrom,DESCMid.Pdate FROM DESCMid INNER JOIN Photo ON DESCMid.Pid = Photo.Pid;");
+            OleDat = new OleDbDataAdapter(strSQL.ToString(), ConStr);
 
+            Olecon = new OleDbConnection(ConStr);
+            Olecon.Open();
+            Maxvalue = Convert.ToInt32(new OleDbCommand(strSQL1.ToString(), Olecon).ExecuteScalar());
+            Olecon.Close();
+
+            // 0 ~ Maxvalue 行
+            OleDat.Fill(0, Maxvalue, dt);
+
+            dataGridView1.DataSource = dt;
+        }
+
+        private void btn_origin_Click(object sender, EventArgs e)
+        {
+
+            /**********************默认按照数据库原有顺序排列****************************/
+            string strPath = Application.StartupPath + "\\PicShareDB.accdb";
+            ConStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data source=" + strPath;
+
+            dt = new DataTable();
+
+            StringBuilder strSQL = new StringBuilder();
+            StringBuilder strSQL1 = new StringBuilder();
+
+            strSQL.Append("select * from Photo");
+            strSQL1.Append("select count(*) from Photo");
 
             OleDat = new OleDbDataAdapter(strSQL.ToString(), ConStr);
 
