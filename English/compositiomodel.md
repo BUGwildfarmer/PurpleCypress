@@ -33,6 +33,8 @@ Though this drawing is a little exaggerating,it is not rare for us to find in...
 Though the government has already taken pains to implement regulations,it still fails to...
 ...,which was what mattered 
 
+Typically,possessing the qualities of fortitude are enough to emancipate the characters of burden and suffering,paveing the way for harmonious and prosperous futures.
+
 ## 3.Drawconclusion
 
 Taking all these factors into consideration/From what had been mentioned above,we can come to the conlusion that...
@@ -70,6 +72,8 @@ There are several reasons undelying sth.
 There was a time when it saturated the evening news and the morning papers that... 
 There is growing sentiment for sth./that...(...情绪日益高涨)
 
+-Indeed,it's the character's relationship to adversity that fully manifests their identity and spirit-their ability to overcome,to rise above,is what reveals their determination and resilience. 
+
 
 
 ## 7.Inversion
@@ -85,6 +89,7 @@ There is growing sentiment for sth./that...(...情绪日益高涨)
 - be second to none/nothing(无与伦比)
 - Nothing is too small to konow,and nothing is too big to attempt. 
 - No discussion about upscale tea and the lifestyle of China's young generation is complete without HeyTea.
+- No words seem more apt here than Miyazaki's:"always believe in yourself.Do this and no matter where you are,you will have nothing to fear."
 
 ## 9.Imperative/Plaint
 
