@@ -114,7 +114,7 @@ namespace Stu.Zzr.FinalHomework
 
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("菜单栏进行切换可以得到城市当前天气以及近五天的天气状况\n作者:赵紫如\n制作时间:大二学年.net课程", "帮助文档");
+            MessageBox.Show("菜单栏进行切换可以得到城市当前天气以及近五天的天气状况\n作者:陈仕柏\n制作时间:大三学年.net课程", "帮助文档");
         }
 
         private void TodayToolStripMenuItem_Click(object sender, EventArgs e)
