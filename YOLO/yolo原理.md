@@ -109,7 +109,7 @@
 ### 3.yolo v3
 
 > 论文来源： 2018CVPR
-> YOLOv3: An Incremental Improvement
+> [YOLOv3: An Incremental Improvement](https://arxiv.org/pdf/1804.02767.pdf)
 
 #### 3.1  backbone 结构( darknet53 )
 
@@ -228,6 +228,144 @@ $0 \leq DIoU Loss \leq 2$
 $CIoU = IoU - (\frac{\rho^2(b,b^{gt})}{c^2}+\alpha \upsilon)$
 $\upsilon = \frac{4}{\pi^2}(\arctan \frac{w^{gt}}{h^{gt}}-\arctan \frac{w}{h})^2$
 $\alpha = \frac{\upsilon}{(1-IoU)+\upsilon}$
+
+> 一个优秀的回归定位损失应该考虑到 3 种几何参数：
+> 重叠面积 中心点距离 长宽比
+
+##### 3.5.4 应对正负样本数量不平衡： Focal Loss
+
+(1) 对于普通的交叉熵损失（二分类）CE (cross entropy) 而言：
+
+$$ CE(p,y)  =\begin{cases}
+-ln(p) & y = 1 \\
+-ln(1-p) & otherwise \\
+\end{cases}$$
+
+或
+
+$$ p_t = \begin{cases}
+p & y =1 \\
+1 - p & otherwise \\
+\end{cases} $$
+
+$CE(p,y)=CE(p_t)=-ln(p_t)$
+
+(2) 引入平衡因子(Balanced Cross Entropy)
+
+$CE(p_t)=-\alpha_t ln(p_t)$
+
+$\alpha$为用于平衡正负样本的超参数
+
+(3) 加入可以区分难易样本的参数
+
+$FL(p_t)=-(1-p_t)^\gamma log(p_t)$
+
+$(1-p_t)^\gamma$ 能够降低易分样本的损失贡献，使得模型专注训练复杂样本
+
+(4) 结合超参数
+
+$FL(p_t) = -\alpha_t(1-p_t)^\gamma ln(p_t)$
+
+即
+
+$$FL(p)=\begin{cases}
+-\alpha (1-p)^\gamma ln(p) & y = 1 \\
+-(1-\alpha)p^\gamma ln(1-p) & otherwise \\
+\end{cases}$$
+
+![](pic/yolov3_focalloss.png)
+
+由数据可知，对于简单样本 Focal Loss 相比于 CE 降低了简单样本的损失贡献率，使得模型更好地训练难学习样本
+
+==FocalLoss 易受噪声干扰，在使用过程中需要进行调参，同时也要保证数据集的标注精准度，否则也会使效果下降==
+
+### 4.yolov4
+
+> [Yolov4: Optimal Speed and Accuracy of Object Detection](https://arxiv.org/pdf/2004.10934.pdf)
+
+#### 4.1 网络结构
+
+![](pic/yolov4_backbone.png)
+
+* 基础仍是 yolov3 网络，backbone 为 CSPDarknet53 ，Resblock 为残差结构
+* SPP 通过 4 个不同尺度的最大池化对输入的特征层进行池化后拼接，大小分别为 `13 * 13` `9 * 9` `5 * 5` `1 * 1`
+* PA Net 与 yolov3 的增强网络类似（特征金字塔结构： FPN + PAN），通过卷积和上采样(FPN:13->26->52)进行对应层的拼接，之后再进行卷积和下采样(PAN：52->26->13)进行对应层拼接`不断上下采样通道堆叠得到更好的特征，对 3 个有效特征层进行特征的反复提取`
+* YOLO Head 和 yolov3 的三个预测层相同(N * N * 3 * (5 + 70))
+
+#### 4.2 backbone 网络(CSPDarknet53)
+
+相比于 yolov3 ,其改进的地方有：
+
+(1) 激活函数： LeakyReLU -> Mish
+
+convolutional 结构变为 `darknetConv2D` `BN` `Mish`
+
+Mish 函数： $Mish = x \times tanh(ln(1+e^x))$
+
+其图像为：
+
+![](pic/yolov4_Mish.png)
+
+(2) 残差结构使用了 CSPnet 结构
+
+![](pic/yolov4_cspnet.png)
+
+CSP net 将原来残差快的堆叠进行了一个拆分，主干部分不变，另一个部分经过少量处理连接到最后，即多了一条绕过了很多残差结构的大残差边
+
+
+#### 4.3 tricks
+
+(1) 在预测结构中，yolov4 的方法是：
+* 取出每一类得分大于阈值的目标框和得分
+* 利用框的位置和得分进行非极大值抑制
+
+(2) Mosaic 数据增强
+
+同 yolov3_SPP 处理，一次对 4 张图片的信息进行组合
+
+(3) Label Smoothing 平滑
+
+`new_onehot_labels = onehot_labels * (1 - label_smoothing) + label_smoothing / num_classes
+`
+
+标签(0,1) -> 平滑(0.005,0.995)
+
+(4) 损失函数引入 CIoU ，同 yolov3_SPP
+
+(5) 学习率余弦退火衰减
+
+![](pic/yolov4_warmup.png)
+
+
+### 5.yolov5
+
+#### 5.1 网络结构
+
+![](pic/yolov5_net.png)
+
+#### 5.2 Focus 结构
+
+![](pic/yolov5_focus.png)
+
+4 * 4 * 3  ->   2 * 2 * 12
+
+#### 5.3 两种 CSP 结构
+
+![](pic/yolov5_csp.png)
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 
 
 
