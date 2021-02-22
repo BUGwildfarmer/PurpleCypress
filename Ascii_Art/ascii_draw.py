@@ -1,12 +1,22 @@
-# 利用 ffmpeg 生成序列图片和合并序列图片为视频的命令如下
-# ffmpeg -i 视频文路径 -r 30 -qscale:v 2 输出文件路径(eg.out/%04d.jpg)
-# ffmpeg -i 输入文件夹路径(%04d.jpg) -c:v libx264 -vf fps=30 -pix_fmt yuv420p 输出文件路径(eg.out.mp4)
-
+from ffmpy3 import FFmpeg
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 import os
+import sys
+import shutil
 
 sample_rate = 0.1
+
+# ffmpeg -i 视频文路径 -r 30 -qscale:v 2 输出文件路径(eg.out/%04d.jpg)
+
+
+def video_to_frames(viedo_file):
+    # 创建存储视频原始帧序列文件夹
+    os.mkdir("test_origin")
+    # 执行ffmpeg命令，30对应帧数
+    ff = FFmpeg(inputs={viedo_file: None}, outputs={
+                'test_origin/%04d.jpg': ['-r', '30', '-qscale:v', '2']})
+    ff.run()
 
 
 def ascii_art(file):
@@ -35,7 +45,8 @@ def ascii_art(file):
     symbols = np.array(list(" .,-vYM@"))
 
     # Normalize minimum and maximum to [0, max_symbol_index)
-    im = (im - im.min()) / (im.max() - im.min()) * (symbols.size - 1) if im.min() != im.max() else im 
+    im = (im - im.min()) / (im.max() - im.min()) * \
+        (symbols.size - 1) if im.min() != im.max() else im
 
     # Generate the ascii art
     ascii = symbols[im.astype(int)]
@@ -61,18 +72,35 @@ def ascii_art(file):
 
     # Save image file
     im_out_width = im_out_size[0] - 1 if im_out_size[0] & 1 else im_out_size[0]
-    im_out_height = im_out_size[1] - 1 if im_out_size[1] & 1 else im_out_size[1]
-    im_outf = im_out.resize((im_out_width,im_out_height),Image.ANTIALIAS) #resize image with high-quality
-    im_outf.save("out/" + file.split('.')[0].split('/')[1] + "_ascii.png")
+    im_out_height = im_out_size[1] - \
+        1 if im_out_size[1] & 1 else im_out_size[1]
+    # resize image with high-quality
+    im_outf = im_out.resize((im_out_width, im_out_height), Image.ANTIALIAS)
+    im_outf.save("test_out/" + file.split('.')[0].split('/')[1] + "_ascii.jpg")
 
 
-if __name__ == "__main__":
-    path = "./origin/"
+def pics_to_ascii():
+    # 创建存储字符帧序列文件夹
+    os.mkdir("test_out")
+    path = "./test_origin/"
     files = os.listdir(path)
     for filename in files:
         #print("origin/" + filename)
-        ascii_art("origin/" + filename)
+        ascii_art("test_origin/" + filename)
+
+# ffmpeg -i 输入文件夹路径(%04d.jpg) -c:v libx264 -vf fps=30 -pix_fmt yuv420p 输出文件路径(eg.out.mp4)
 
 
+def asciipic_to_video():
+    # 执行ffmpeg命令，30对应帧数
+    ff = FFmpeg(inputs={'test_out/%04d_ascii.jpg': None}, outputs={
+                'test_out.mp4': ['-c:v', 'libx264', '-vf', 'fps=30', '-pix_fmt', 'yuv420p']})
+    ff.run()
 
-    
+
+if __name__ == "__main__":
+    video_to_frames(str(sys.argv[1]))
+    pics_to_ascii()
+    asciipic_to_video()
+    shutil.rmtree('test_origin')
+    shutil.rmtree('test_out')
